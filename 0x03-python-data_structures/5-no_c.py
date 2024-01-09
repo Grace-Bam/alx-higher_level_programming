@@ -1,7 +1,10 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+"""
+removes all characters c and C from a string
+"""
 
 
 def no_c(my_string):
-    new_s = my_string.translate({ord('c'): None})
-    new_s = new_s.translate({ord('C'): None})
-    return new_s
+
+    new = [x for x in my_string if x != 'c' and x != 'C']
+    return "".join(new)
